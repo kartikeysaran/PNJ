@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="325dp"
+    android:background="@color/white"
+    android:layout_height="730dp"
+    android:layout_marginLeft="0dp"
+    android:gravity="left"
+    android:layout_gravity="left"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="left">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:src="@drawable/homeblue"
+                android:layout_gravity="top"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="PNJ HUB"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:id="@+id/pnjhub"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="PNJ Legal"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/legal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="PNJ Antiques Market"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/antiques"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="PNJ Rise Community"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/rise"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="PNJ Digital Seo City"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/dsc"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="PNJ Achieve Degree"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/achieve"/>
+
+
+    </LinearLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+

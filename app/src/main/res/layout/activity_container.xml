@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".container"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="689dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:text="PNJ"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+        <view
+            android:id="@+id/view"
+            class="androidx.viewpager.widget.ViewPager"
+            android:layout_width="411dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="50dp"
+            android:text="Our Services"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/pnjwebview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button2"
+                        android:text="PNJ Hub" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Enjoy Wide Range of Services. PNJ connects you to experts across a spectrum of professional services."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <Button
+                        android:id="@+id/legalwebview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button3"
+                        android:text="Legal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="We are technology platform to simplify legal and business-related matters. We are committed to helping startups and small business owners in solving legal compliance related to starting and running their business."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/antiqueswebview"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:text="Antiques Market" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="PNJ Antiques act as a platform where antique lovers of all over the world attend exhibitions all across the globe and discussion forums are held by industry experts who share the history with the future."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <Button
+                        android:id="@+id/achievewebview"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button3"
+                        android:text="Achieve Degree" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="PNJ Educators is division of PNJ professionals Network joint Pvt Ltd who is bringing new revolution in education industry by providing online courses in field of middle level management."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <Button
+                        android:id="@+id/digitalwebview"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button"
+                        android:text="Digital Seo City" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="We will help you achieve a formidable social media presence and promote your brand by creating professionally crafted posts suitable for the growth of your business, and designed to help you gain more attention fast."
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/risewebview"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button2"
+                        android:text="Rise Commmunity" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Create amazing crowdfunding sites today for rise community! Crowdfunding in India allows you to fund anything, from a medical emergency to a social cause, even dream project!"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/menu2"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/menu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:id="@+id/home"
+        android:src="@drawable/homeblue"
+        android:layout_marginTop="700dp"
+        
+
+        android:layout_marginLeft="30dp"
+        />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:id="@+id/news"
+        android:layout_gravity="bottom"
+        android:src="@drawable/kasndkanks"
+        android:gravity="top"
+        android:layout_marginBottom="0dp"
+
+        android:layout_marginTop="700dp"
+        android:layout_marginLeft="70dp"
+        />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/game"
+        android:src="@drawable/gamespng"
+
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginTop="710dp"
+        android:layout_marginLeft="70dp"
+        />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

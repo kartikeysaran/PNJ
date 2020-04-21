@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".container"></activity>
+        <activity android:name=".game"></activity>
+        <activity android:name=".news" />
+        <activity android:name=".digitalwebview" />
+        <activity android:name=".legalwebview" />
+        <activity android:name=".achievewebview" />
+        <activity android:name=".antiqueswebview" />
+        <activity android:name=".risewebview" />
+        <activity android:name=".hubwebview" />
+        <activity android:name=".container" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

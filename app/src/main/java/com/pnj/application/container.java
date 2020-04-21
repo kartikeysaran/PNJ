@@ -29,7 +29,16 @@ public class container extends AppCompatActivity {
 
     public void showpopup(){
 
+        TextView close;
+        close = (TextView)findViewById(R.id.closepop);
+
         dialog.setContentView(R.layout.swipeleft);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             dialog.dismiss();
+            }
+        });
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 

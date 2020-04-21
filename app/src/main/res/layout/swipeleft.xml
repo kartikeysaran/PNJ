@@ -28,13 +28,23 @@
                 android:layout_gravity="top"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="60dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
                 android:text="HOME"
                 android:textSize="16dp"
                 android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  X  "
+                android:textStyle="bold"
+                android:layout_marginLeft="170dp"
+                android:id="@+id/closepop"
+                android:background="@drawable/oval"
+                android:layout_marginTop="20dp"/>
+
 
         </LinearLayout>
         <TextView

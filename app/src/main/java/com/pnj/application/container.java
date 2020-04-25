@@ -48,6 +48,21 @@ public class container extends AppCompatActivity {
         antiqueswebview = findViewById(R.id.antiqueswebview);
         digitalwebview = findViewById(R.id.digitalwebview);
 
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(container.this,game.class);
+                startActivity(i);
+            }
+        });
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(container.this,news.class);
+                startActivity(i);
+        }
+        });
+
 
 
         menu.setOnClickListener(new View.OnClickListener() {

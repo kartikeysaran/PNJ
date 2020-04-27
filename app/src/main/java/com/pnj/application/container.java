@@ -14,11 +14,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 public class container extends AppCompatActivity {
     ViewPager viewPager;
     Dialog dialog;
     float x1,x2,y1,y2;
-    ImageView home,menu,game,news;
+    ImageView home,menu,news;
+
+
 
     Button pnjwebview,legalwebview,risewebview,achievewebview,antiqueswebview,digitalwebview;
 
@@ -31,15 +35,21 @@ public class container extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
 
+
+        viewPager = findViewById(R.id.viewPager);
+        ImageAdapter adapter = new ImageAdapter(this);
+        viewPager.setAdapter(adapter);
+
         home = findViewById(R.id.home);
         menu = findViewById(R.id.menu);
-        game = findViewById(R.id.game);
+
         news = findViewById(R.id.news);
 
 
 
+
         dialog = new Dialog(this);
-        viewPager = (ViewPager)findViewById(R.id.view);
+
 
         pnjwebview = findViewById(R.id.pnjwebview);
         legalwebview = findViewById(R.id.legalwebview);
@@ -48,13 +58,7 @@ public class container extends AppCompatActivity {
         antiqueswebview = findViewById(R.id.antiqueswebview);
         digitalwebview = findViewById(R.id.digitalwebview);
 
-        game.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(container.this,game.class);
-                startActivity(i);
-            }
-        });
+
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -131,14 +135,25 @@ public class container extends AppCompatActivity {
 
 
         dialog.setContentView(R.layout.swipeleft);
-        TextView close,hub,legal,antiques,rise,digital,achieve;
+        TextView hub,legal,antiques,rise,digital,achieve,home;
+
+        home = (TextView)dialog.findViewById(R.id.home);
+
         hub = (TextView)dialog.findViewById(R.id.pnjhub);
         legal = (TextView)dialog.findViewById(R.id.legal);
         antiques = (TextView)dialog.findViewById(R.id.antiques);
         rise = (TextView)dialog.findViewById(R.id.rise);
         digital = (TextView)dialog.findViewById(R.id.dsc);
+
         achieve = (TextView)dialog.findViewById(R.id.achieve);
-        close = (TextView)dialog.findViewById(R.id.closepop);
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
 
         hub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,17 +200,17 @@ public class container extends AppCompatActivity {
                 Intent i = new Intent(container.this,antiqueswebview.class);
                 startActivity(i);
 
-            }
-        });
-        close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.dismiss();
+
             }
         });
 
+
+
+
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
+
+
 
 
     }
@@ -212,11 +227,12 @@ public class container extends AppCompatActivity {
 
                 if(x1<x2){
 
-                   showpopup();
+                    showpopup();
 
                 }
                 else if(x1>x2){
-                   dialog.dismiss();
+                    Intent i = new Intent (container.this,news.class);
+                    startActivity(i);
                 }
         }
         return false; }

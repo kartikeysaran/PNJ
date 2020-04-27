@@ -5,16 +5,18 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class News {
+public class Headlines {
     @SerializedName("status")
     @Expose
     private String status;
-    @SerializedName("totalResult")
+
+    @SerializedName("totalResults")
     @Expose
-    private int totalResult;
+    private String totalResults;
+
     @SerializedName("articles")
     @Expose
-    private List<Article> articles;
+    private List<Articles> articles;
 
     public String getStatus() {
         return status;
@@ -24,19 +26,19 @@ public class News {
         this.status = status;
     }
 
-    public int getTotalResult() {
-        return totalResult;
+    public String getTotalResults() {
+        return totalResults;
     }
 
-    public void setTotalResult(int totalResult) {
-        this.totalResult = totalResult;
+    public void setTotalResults(String totalResults) {
+        this.totalResults = totalResults;
     }
 
-    public List<Article> getArticles() {
+    public List<Articles> getArticles() {
         return articles;
     }
 
-    public void setArticles(List<Article> articles) {
+    public void setArticles(List<Articles> articles) {
         this.articles = articles;
     }
 }

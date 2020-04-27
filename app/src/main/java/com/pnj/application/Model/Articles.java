@@ -3,9 +3,8 @@ package com.pnj.application.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import javax.xml.transform.Source;
+public class Articles {
 
-public class Article {
     @SerializedName("source")
     @Expose
     private Source source;
@@ -17,15 +16,17 @@ public class Article {
     @SerializedName("title")
     @Expose
     private String title;
+
     @SerializedName("description")
     @Expose
     private String description;
-    @SerializedName("url")
-    @Expose
-    private String url;
+
+
+
     @SerializedName("urlToImage")
     @Expose
     private String urlToImage;
+
     @SerializedName("publishedAt")
     @Expose
     private String publishedAt;
@@ -60,14 +61,6 @@ public class Article {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public String getUrlToImage() {

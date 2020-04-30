@@ -5,8 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.pnj.application.Model.Adapter;
 import com.pnj.application.Model.ApiClient;
 import com.pnj.application.Model.Articles;
@@ -25,6 +28,7 @@ public class news extends AppCompatActivity {
     final String API_KEY = "b55877cd57d6465a80319d4f2b51719e";
     Adapter adapter;
     List<Articles> articles = new ArrayList<>();
+    InterstitialAd mInterstitialAd;
 
 
     @Override
@@ -37,6 +41,23 @@ public class news extends AppCompatActivity {
         String country = getCountry();
         retrieveJson(country,API_KEY);
 
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+    }
+    public void showads(){
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "Check Your Internet connection.");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        showads();
     }
     public void retrieveJson(String country,String apiKey){
         Call<Headlines> call = ApiClient.getInstance().getApi().getHeadlines(country,apiKey);

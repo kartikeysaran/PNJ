@@ -3,15 +3,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 public class antiqueswebview extends AppCompatActivity {
 
     ProgressBar progressBar;
+    InterstitialAd mInterstitialAd;
     WebView webView;
 
     @Override
@@ -22,6 +27,9 @@ public class antiqueswebview extends AppCompatActivity {
         webView = (WebView)findViewById(R.id.webView);
 
         progressBar = findViewById(R.id.progressBar);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://www.antiquesmarket.in/");
@@ -46,10 +54,19 @@ public class antiqueswebview extends AppCompatActivity {
         });
     }
 
+    public void showads(){
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "Check Your Internet connection.");
+        }
+    }
+
     @Override
     public void onBackPressed() {
         if(webView.canGoBack()){
             webView.goBack();
+            showads();
         }
         else{
             super.onBackPressed();

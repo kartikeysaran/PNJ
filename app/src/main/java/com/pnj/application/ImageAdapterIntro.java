@@ -8,12 +8,12 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class ImageAdapter extends PagerAdapter {
+public class ImageAdapterIntro extends PagerAdapter {
 
     private Context mContext;
-    private int[] mImageIds = new int[] {R.drawable.p1,R.drawable.p2,R.drawable.p3,R.drawable.p4,R.drawable.p5,R.drawable.p6,R.drawable.p7,R.drawable.p8,R.drawable.p9};
+    private int[] mImageIds = new int[] {R.drawable.acintro,R.drawable.anintro,R.drawable.dintro};
 
-    ImageAdapter(Context context){
+    ImageAdapterIntro(Context context){
         mContext = context;
     }
     @Override
@@ -43,4 +43,3 @@ public class ImageAdapter extends PagerAdapter {
     }
 
 }
-
